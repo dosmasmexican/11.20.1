@@ -15,5 +15,11 @@ function draw() {
     emitter.applyForce(gravity);
     emitter.addParticle();
     emitter.run();
-  } 
+  } else {
+    noStroke();
+    fill(255, 255);
+    circle(width / 2, 250, 100);
+    fill("#4b991a");
+    rect(width / 2 - 10, 260, 20, 160, 40);
+  }
 }
