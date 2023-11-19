@@ -7,4 +7,13 @@ function setup() {
 
 function draw() {
   background("#facc28");
+
+  if (mouseIsPressed) {
+    fill("#4b991a");
+    rect(width / 2 - 10, 260, 20, 160, 40);
+    let gravity = createVector(0, 0.1);
+    emitter.applyForce(gravity);
+    emitter.addParticle();
+    emitter.run();
+  } 
 }
