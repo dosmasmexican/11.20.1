@@ -15,6 +15,10 @@ function draw() {
     emitter.applyForce(gravity);
     emitter.addParticle();
     emitter.run();
+    if (mouseButton === RIGHT) {
+      let wind = createVector(0.1, -0.2);
+      emitter.applyForce(wind);
+    }
   } else {
     noStroke();
     fill(255, 255);
